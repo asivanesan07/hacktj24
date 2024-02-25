@@ -1,0 +1,13 @@
+{% extends 'base.html' %} <title>{% block title %}Affirmations{% endblock %}</title>
+{% block content %}
+    <body style="background-color:#e982bb"></body>
+    <h3 id='test'>[Your Affirmation Here]</h3>
+    <button type = 'dosomething' onclick='dosomething()' style="background-color:rgb(238, 8, 123)">click for affirmation</button>
+    <script>
+        function dosomething(){
+            var affirm = new Array("I believe in you!", "You can do it!", "You are beautiful!", "You are strong!", "Be positive!","This will be your day!","Believe in yourself!");
+            var random = affirm[Math.floor(Math.random() * affirm.length)];
+            document.getElementById('test').innerHTML = random;
+        }
+    </script>
+{% endblock %}
